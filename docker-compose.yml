@@ -1,0 +1,45 @@
+version: '3'
+services:
+  db:
+    container_name: "joaopsh-db"
+    restart: always
+    image: "postgres:11"
+    environment:
+      POSTGRES_PASSWORD: "postgres@passw"
+    ports:
+      - "5432:5432"
+    networks:
+      - db_network
+    volumes:
+      - db_data:/var/lib/postgresql/data
+  db-manager:
+    container_name: "joaopsh-db-manager"
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "postgres@localhost.com"
+      PGADMIN_DEFAULT_PASSWORD: "postgres@passw"
+    ports:
+      - "16543:80"
+    depends_on:
+      - db
+    networks:
+      - db_network
+  api:
+    container_name: "joaopsh-api"
+    restart: always
+    depends_on:
+      - db
+    build: .
+    ports:
+        - "5000:5000"
+        - "5050:5050"
+    networks:
+      - db_network
+    volumes:
+        - .:/usr/src/app
+  
+networks:
+  db_network:
+    driver: bridge
+volumes:
+    db_data:

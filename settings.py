@@ -1,0 +1,9 @@
+import os
+from dotenv import load_dotenv
+
+load_dotenv(verbose=True)
+
+DEBUG = os.getenv('JOAOPSH_API_DEBUG')
+ENABLE_DEBUGGER_ATTACH = os.getenv('JOAOPSH_API_ENABLE_DEBUGGER_ATTACH')
+SQLALCHEMY_DATABASE_URI = os.getenv('SQLALCHEMY_DATABASE_URI')
+SQLALCHEMY_TRACK_MODIFICATIONS = os.getenv('SQLALCHEMY_TRACK_MODIFICATIONS')
