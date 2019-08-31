@@ -1,4 +1,0 @@
-{
-    "internal_server_error": "Something went wrong while processing the request.",
-    "resource_not_found": "The requested resource doesn't exist."
-  }

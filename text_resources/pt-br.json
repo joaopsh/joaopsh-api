@@ -1,0 +1,4 @@
+{
+    "INTERNAL_SERVER_ERROR": "Algo deu errado enquanto processávamos a requisição.",
+    "RESOURCE_NOT_FOUND": "O recurso requisitado não existe."
+}
