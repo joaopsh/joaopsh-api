@@ -15,7 +15,7 @@ sqlalchemy = "*"
 flask-sqlalchemy = "*"
 marshmallow-sqlalchemy = "*"
 psycopg2-binary = "*"
-ptvsd = "*"
+ptvsd = "==4.3.2"
 
 [requires]
 python_version = "3.7"

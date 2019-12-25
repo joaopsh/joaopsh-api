@@ -5,7 +5,7 @@ services:
     restart: always
     image: "postgres:11"
     environment:
-      POSTGRES_PASSWORD: "postgres@passw"
+      POSTGRES_PASSWORD: "P@ssw0rd"
     ports:
       - "5432:5432"
     networks:
@@ -17,7 +17,7 @@ services:
     image: dpage/pgadmin4
     environment:
       PGADMIN_DEFAULT_EMAIL: "postgres@localhost.com"
-      PGADMIN_DEFAULT_PASSWORD: "postgres@passw"
+      PGADMIN_DEFAULT_PASSWORD: "P@ssw0rd"
     ports:
       - "16543:80"
     depends_on:

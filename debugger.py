@@ -9,7 +9,6 @@ class Debugger:
             import ptvsd
             
             ptvsd.enable_attach(address=(ADDRESS,PORT), redirect_output=True)
-            # ptvsd.wait_for_attach()
             print(f'Debugger attach enabled (PTVSD)! Running on {ADDRESS}:{PORT}.')
         except Exception as exception:
             print(f"Debugger attach couldn't be enabled. Error: {exception}")
