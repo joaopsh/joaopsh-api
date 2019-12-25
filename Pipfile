@@ -9,13 +9,13 @@ verify_ssl = true
 flask = "*"
 flask-restful = "*"
 flask-jwt-extended = "*"
-marshmallow = "==3.0.0rc8"
+marshmallow = "*"
 flask-marshmallow = "*"
 sqlalchemy = "*"
 flask-sqlalchemy = "*"
 marshmallow-sqlalchemy = "*"
 psycopg2-binary = "*"
-ptvsd = "==4.3.2"
+ptvsd = "*"
 
 [requires]
 python_version = "3.7"
